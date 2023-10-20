@@ -3,18 +3,23 @@
 
 .header-main{
     width: 100%;
-    padding-left: 5%;
+    padding-left: 0%;
     @include bg-color($primary-color);
     &__top{
         padding-top: 5%;
         width: 100%;
+        margin-bottom: 50px;
         @include flex($align:center,$justify:space-around,$direction:row);
-        .logo{
+        
+        .header-main__logo{
+            .logo{
             width: 32px;
             height: 32px;
-        }
-        .header-main__logo{
-            display: none;
+            }
+            .logo__content{
+                display: none;
+            }
+           
         }
         .menu{
             .menu__contact{
@@ -24,8 +29,37 @@
                 display: none;
             }
             .getst{
-                @include button($width:220px,$height:60px,$background-color:$button-color-primary,$border-radius:20px);
+                @include button($width:220px,$height:60px,$background-color:$button-color-primary,$border-radius:20px,$border:none);
+                @include flex($justify:center,$align:center);
+            &__link{
+                @include font($color:$button-color-secondary,$font-size:pxToRem(16),$font-weight:600,$font-style:normal);
+                @include flex($direction:row);
+                text-decoration: none;
+                .arrow-right{
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 10px;
+                }
+            }
             }
         }
     }
+    &__bottom{
+        width: 100%;
+       @include flex($direction:column,$justify:center,$align:center);
+       .header-main__content{
+        width: 80%;
+        @include flex($direction:column,$justify:center,$align:center);
+        .header-main__title{
+            @include font($color:$text-color-primary,$font-weight:900,$font-size:pxToRem(38),$line-height:130%,$font-style:normal);
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        .header-main__desc{
+            text-align: center;
+            @include font();
+        }
+       }
+    }
+
 }

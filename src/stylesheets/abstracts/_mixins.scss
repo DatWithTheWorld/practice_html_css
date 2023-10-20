@@ -1,7 +1,7 @@
 @use './functions';
 @use './variables';
 
-@mixin button($width:false,$height:false,$background-color:false,$border-radius:false){
+@mixin button($width:false,$height:false,$background-color:false,$border-radius:false,$border:false){
     @if $width != false{
         width: $width;
     }
@@ -14,29 +14,32 @@
     @if $border-radius != false{
         border-radius: $border-radius;
     }
+    @if $border!= false{
+        border: $border;
+    }
 }
 @mixin font($font-family:false,$font-size:false,$font-weight:false,$font-style:false,$line-height:false,$color:false){
 @if ($font-family != false) {
-   $font-family:$font-family;
+   font-family:$font-family;
 }
 @if $font-size{
-    $font-size: $font-size; 
+    font-size: $font-size; 
 }
 
 @if $font-weight{
-    $font-weight: $font-weight;
+    font-weight: $font-weight;
 }
 
 @if $font-style{
-    $font-style: $font-style;
+    font-style: $font-style;
 }
 
 @if $line-height{
-    $line-height: $line-height;
+    line-height: $line-height;
 }
 
 @if $color{
-    $color: $color;
+    color: $color;
 }
 
 }
