@@ -3,15 +3,17 @@
 
 .header-main{
     width: 100%;
-    padding-left: 0%;
     @include bg-color($primary-color);
     &__top{
-        padding-top: 5%;
+        position: relative;
+        padding-top: 15%;
         width: 100%;
         margin-bottom: 50px;
-        @include flex($align:center,$justify:space-around,$direction:row);
-        
+        @include flex($align:center,$direction:row);
+        @include tablet{}
         .header-main__logo{
+            position: absolute;
+            left: 3%;
             .logo{
             width: 32px;
             height: 32px;
@@ -22,6 +24,8 @@
            
         }
         .menu{
+            position: absolute;
+            right: 3%;
             .menu__contact{
                 display: none;
             }
@@ -48,17 +52,79 @@
         width: 100%;
        @include flex($direction:column,$justify:center,$align:center);
        .header-main__content{
-        width: 80%;
         @include flex($direction:column,$justify:center,$align:center);
-        .header-main__title{
-            @include font($color:$text-color-primary,$font-weight:900,$font-size:pxToRem(38),$line-height:130%,$font-style:normal);
+        .header-main__title{ 
+            width: 80%;
+            @include font($font-family:$secondary-font,$color:$text-color-primary,$font-weight:700,$font-size:pxToRem(38),$line-height:130%,$font-style:normal);
             text-align: center;
             letter-spacing: -1px;
         }
         .header-main__desc{
+            width: 85%;
             text-align: center;
-            @include font();
+            margin: 8% 0;
+            @include font($font-family:$third-font,$font-size:pxToRem(16),$font-weight:400,$line-height:150%,$font-style:normal);
+            .desc__link{
+                @include font($color:$text-color-anima);
+                text-decoration: none;
+            }
         }
+       }
+       .header-main__button{
+        width: 100%;
+        margin-bottom: 25%;
+        @include flex($direction:column,$gap:20px,$justify:center,$align:center);
+        .button-getst{
+            @include button($width:60%,$height:60px, $background-color:$button-color-primary,$border:none,$border-radius:20px);
+            @include flex($justify:center,$align:center);
+            @include font($font-size:pxToRem(16),$font-weight:600,$line-height:24px,$color:$button-color-secondary);
+            .icon-getst{
+                margin-right: 2%;
+            }
+        }
+        .button-hiw{
+            @include button($width:60%, $height:60px,$border:1px solid $button-color-primary,$background-color:$button-color-secondary,$border-radius:20px);
+            @include font($font-size:pxToRem(16),$font-style:normal,$line-height:24px,$color:$button-color-primary,$font-weight:600);
+        }
+       }
+       .header-main__picture{
+        width: 100%;
+        @include flex($justify:center,$align:center);
+        &--block{
+            position: relative;
+            width: 80%;
+            z-index: 0;
+            @include flex($justify:center,$align:center); 
+            .icon-star{
+                position: absolute;
+                width: 28px;
+                height: 35px;
+            }
+            .icon-star--white{
+                left: 0;
+                top: 15%;
+            }
+            .icon-star--red{
+                right: 0;
+            }
+            .cover-phone{
+                @include flex($justify:center,$align:center);
+                .pic-phone{
+                    padding-left: 8%;
+                }
+            }
+            &::before{
+                content: '';
+                z-index: -2;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 75%;
+                border-radius: 90px 90px 0 0;
+                background-color: $button-color-secondary;
+            }
+        }
+        
        }
     }
 

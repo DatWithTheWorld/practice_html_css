@@ -4,15 +4,18 @@ $primary-color : #F8D57E;
 $secondary-color : #F8F9FF;
 $text-color-primary:#2D2D2D;
 $text-color-secondary:#009379;
+$text-color-anima:#36F;
 $button-color-primary : #009379;
 $button-color-secondary:#FFF;
 
 
-//responsiev
-$mobile:429px;
+//responsive
+$small:429px;
+$mobiles:calc($small - 1px);
 $medium: 768px;
-$desktop: 1200px;
-$tablet: calc($desktop - 1px);
+$extra-large:1200px;
+$desktop: calc($extra-large + 0px);
+$tablet: calc($extra-large - 1px);
 
 //font
 $primary-font : PoppinsRegular;
