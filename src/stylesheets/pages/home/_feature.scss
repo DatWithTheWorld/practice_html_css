@@ -1,0 +1,36 @@
+@use "../../abstracts/" as *;
+.features{
+    position: relative;
+    z-index: 4;
+    margin-top: -25%;
+    background-color: $secondary-color;
+    width: 100%;
+    @include flex($direction:column,$justify:center,$align:center);
+    text-align: center;
+    &__content{
+       &-main-content{
+          margin-top: 15%;
+          &-first--title{
+            @include font($font-size:pxToRem(38),$font-style:normal,$font-weight:700,$line-height:130%,$font-family:$secondary-font);
+          }
+       }
+       &-button{
+        @include grid($grid-tplt-column:35% 35%, $grid-tplt-row: 50% 50%,$justify-content:center,$align-items:center,$grid-gap:10px 10px);  
+        .features-button{
+            
+        }
+       }
+    }
+    &__picture{
+        position: relative;
+        &-smartphone{
+            padding-left: 5%;
+        }
+        &-star--red{
+            position: absolute;
+        }
+        &-star--white{
+            position: absolute;
+        }
+    }
+}
