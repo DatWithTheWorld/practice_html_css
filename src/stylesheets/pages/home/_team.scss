@@ -1,0 +1,91 @@
+@use "../../abstracts/" as *;
+
+.team{
+    @include flex($direction:column,$justify:center,$align:center);
+    text-align: center;
+    padding: 10% 0;
+    width: 100%;
+    background-color: $secondary-color;
+    @include desktop{
+        padding: 3% 0 10% 0;
+    }
+    &__content{
+        width: 90%;
+        @include flex($direction:column,$justify:center,$align:center);
+        .first-title{
+            @include font($font-size:pxToRem(38),$font-weight:600,$font-style:normal,$line-height:130%,$font-family:$secondary-font);
+            letter-spacing: -1px;
+            margin-bottom: 5%;
+            @include desktop{
+                margin-bottom: 2%;
+            }
+        }
+        .second-title{
+            @include font($color:$text-color-primary,$font-family:$third-font,$font-weight:400,$line-height:130%,$font-size:pxToRem(16));
+            width: 90%;
+        }
+    }
+    &__crcard{
+        width: 100%;
+        margin-top: 20%;
+        @include flex($direction:column,$align:center,$justify:center);
+        @include desktop{
+            @include flex($direction:row,$align:center,$justify:space-around);
+            padding: 0 2%;
+            margin-top: 2%;
+        }
+        &-card{
+            background-color: $button-color-secondary;
+            width: 85%;
+            margin-bottom: 10%;
+            padding: 10% 5%;
+            border-radius: 20px;
+            border:1px solid $color;
+            @include flex($direction:column,$justify:center,$align:center);
+            @include tablet{
+                margin-bottom: 3%;
+            }
+            @include desktop{
+                margin-bottom:0%;
+                width: 30%;
+                padding: 5% 2%;
+            }
+            &-image{
+                .image-caption{
+                    margin-top: 5%;
+                    .people-name{
+                        @include font($font-size:pxToRem(21),$font-weight:600,$line-height:130%,$font-style:normal);
+                        margin-bottom: 2%;
+                    }
+                    .people-job{
+                        @include font($font-family:$third-font,$font-size:pxToRem(16),$line-height:20px,$font-weight:400);
+                        margin-bottom: 30%;
+                    }
+                }
+            }
+            &-content{
+                @include flex($direction:column,$justify:center,$align:center);
+                width: 100%;
+               .content-para{
+                @include font($font-family:$third-font,$font-size:pxToRem(16),$font-weight:400, $line-height:160%);
+                width: 86%;
+                @include tablet{
+                    width: 100%;
+                }
+                margin-bottom: 10%;
+               }
+               .content-link{
+                width: 100%;
+                @include flex($justify:space-around);
+                @include tablet{
+                    @include flex($justify:center,$gap:15%);
+                }
+                .link-list{
+                    text-decoration: none;
+                    @include font($font-size:pxToRem(14),$font-style:normal,$font-weight:700,$line-height:20px,$color:$text-color-secondary);
+                }
+               }
+            }
+        }
+    }
+}
