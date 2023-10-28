@@ -1,0 +1,120 @@
+@use "../../abstracts/" as *;
+
+.testimonial{
+    background-color: $primary-color;
+    @include flex($direction:column,$align:center,$justify:center);
+    text-align: center;
+    padding: 20% 0;
+    width: 100%;
+    @include tablet{
+        padding: 10% 0;
+    }
+    @include desktop{
+        padding: 10% 0;
+    }
+    &__content{
+        width: 80%;
+        .first-title{
+            @include font($font-size:pxToRem(38),$font-style:normal,$font-weight:700,$line-height:130%,$font-family:$secondary-font);
+            letter-spacing: -1px;       
+        }
+        .second-title{
+            margin-top: 5%;
+            margin-bottom: 15%;
+            @include font($font-family:$third-font,$font-size:pxToRem(16),$font-style:normal,$font-weight:400,$line-height:150%);
+            @include tablet{
+                margin-bottom: 10%;
+            }
+            @include desktop{
+                margin-top: 2%;
+                margin-bottom: 5%;
+            }
+        }
+    }
+    &__crcard{
+        width: 80%;
+        @include desktop{
+            @include flex($direction:row,$gap:3%);
+            width: 95%;
+        }
+        &-card{
+            width: 100%;
+            background-color: $button-color-secondary;
+            padding: 15% 5%;
+            border-radius: 20px;
+            margin-bottom: 15%;
+            @include flex($direction:column,$justify:center,$align:center);
+            @include tablet{
+                margin-bottom: 5%;
+                @include flex($direction:row);
+                padding: 2%;
+            }
+            @include desktop{
+                 padding: 5%;
+                 @include flex($direction:row,$justify:center,$align:center);
+                 margin-bottom: 0;
+            }
+            &__content{
+                @include flex($direction:column-reverse,$justify:center,$align:center);
+                @include tablet{
+                    @include flex($direction:column,$justify:flex-start,$align:flex-start);
+                    text-align: left;
+                    margin-left: 5%;
+                    width: 80%;
+                    .star--block{
+                        margin-bottom: 5%;
+                    }
+                }
+                @include desktop{
+                    @include flex($direction:column,$justify:flex-start,$align:flex-start);
+                    text-align: left;
+                    margin-left: 5%;
+                    width: 80%;
+                    .star--block{
+                        margin-bottom: 5%;
+                    }
+                }
+                .comment__content{
+                    width: 90%;
+                    margin-bottom: 10%;
+                    @include font($font-family:$third-font,$font-size:pxToRem(16),$font-weight:400,$line-height:150%,$font-style:normal);
+                    @include tablet{
+                     width: 100%;
+                    }
+                    @include desktop{
+                     width: 90%;
+                    }
+                }
+                
+            }
+            &-image{
+                @include tablet{
+                    width: 40%;
+                }
+                @include desktop{
+                    width: 50%;
+                }
+                .image-caption{
+                    .people-name{
+                        @include font($font-size:pxToRem(21),$font-style:normal,$font-weight:600,$line-height:130%);
+                        margin: 1%;
+                    }
+                    .people-job{
+                        @include font($font-family:$third-font,$font-size:pxToRem(14),$font-weight:400,$line-height:160%);
+                        .job-link{
+                            text-decoration: none;
+                            color:$text-color-primary;
+                        }
+                        margin-bottom: 30%;
+                        @include tablet{
+                            margin-bottom: 5%;
+                        }
+                        @include desktop{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

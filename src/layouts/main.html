@@ -1,53 +1,236 @@
 <main>
     <!-- Features section -->
     <section class="features">
-    
-         <!-- Start feature__content block -->
-         <div class="features__content">
-                <!-- Start feature__content__main-content -->
-                <div class="features__content-main-content">
-                       <h2 class="features__content-main-content-first--title">Our features</h2>
-                       <p>Few good reasons why you should use Anima Landing Page Ui Kit to make your own pages.
+
+        <!-- Start feature__content block -->
+        <div class="features__content">
+            <!-- Start feature__content__main-content -->
+            <div class="features__content-main-content">
+                <h2 class="features__content-main-content-first--title">Our features</h2>
+                <div class="features__content-main-content-second--title">
+                    <p>Few good reasons why you should use Anima Landing Page Ui Kit to make your own pages.
+                </div>
+                </p>
+            </div>
+            <!-- End feature__content__main-content -->
+            <!-- Start feature__content__button -->
+            <div class="features__content-button">
+                <button class="features-button">
+                    <figure>
+                        <img src="../assets/icons/ic-flyingSaucer.svg" alt="fly" class="feature-icon">
+                    </figure>
+                    <p class="features-button__content">Fast buildding</p>
+                </button>
+
+                <button class="features-button">
+                    <figure>
+                        <img src="../assets/icons/ic-magic-wand.svg" alt="macgic-wand" class="feature-icon">
+                    </figure>
+                    <p class="features-button__content">Easy to edit</p>
+                </button>
+
+                <button class="features-button">
+                    <figure>
+                        <img src="../assets/icons/ic-bounding-box.svg" alt="bounding-box" class="feature-icon">
+                    </figure>
+                    <p class="features-button__content">Responsiveness</p>
+                </button>
+
+                <button class="features-button">
+                    <figure>
+                        <img src="../assets/icons/ic-package.svg" alt="package" class="feature-icon">
+                    </figure>
+                    <p class="features-button__content">No code needed</p>
+                </button>
+            </div>
+        </div>
+        <!-- End feature__content block -->
+        <!-- Start picture block -->
+        <div class="features__picture">
+            <!-- Circle before the smart phone -->
+            <!-- Smart phone -->
+            <figure>
+                <img src="../assets/images/MobileMockup.png" alt="phone" class="features__picture-smartphone">
+            </figure>
+            <!-- Red star -->
+            <figure>
+                <img src="../assets/icons/ic-substract--red.svg" alt="star" class="features__picture-star--red">
+            </figure>
+            <!-- White star -->
+            <figure>
+                <img src="../assets/icons/ic-substract.svg" alt="star" class="features__picture-star--white">
+            </figure>
+        </div>
+        <!-- End picture block -->
+  </section>
+    <!-- End of Features section -->
+    <!-- Start Project section -->
+    <section class="project">
+        <div class="project__content">
+            <h2 class="project__content-first-content">
+                Selected Works
+            </h2>
+            <h2 class="project__content-sub-content">
+                Discover our lastest work
+            </h2>
+            <p class="project__content-second-content-mbtl">Explore our portfolio and see the latest projects that we've brought to life.</p>
+            <p class="project__content-second-content-desktop">Explore our portfolio and see the latest and greatest projects that we've brought to life.
+            </p>
+        </div>
+        <!-- Three card -->
+        <div class="project__card-container">
+            <include src="./components/card.html" locals='{
+                "list":"[`Project Title`,`Project Title`,`Project Title`]"
+            }'>
+            </include>
+        </div>
+    </section>
+    <!--End of Project section-->
+    <!--Start testimonial section-->
+    <section class="testimonial">
+        <div class="testimonial__content">
+            <h2 class="first-title">
+                Real Stories from Satisfied Customers
+            </h2>
+            <p class="second-title">
+                See how our landing page ui kit is making an impact.
+            </p>
+        </div>
+        <div class="testimonial__crcard">
+            <article class="testimonial__crcard-card">
+                <figure class="testimonial__crcard-card-image">
+                    <img src="../assets/images/customergirl.png" alt="girl" class="people-image">
+                    <figcaption class="image-caption">
+                        <h5 class="people-name">
+                             Lauren M.
+                        </h5>
+                        <p class="people-job">
+                            UI Designer <a href="#" class="job-link">@Bao</a>
+                        </p>
+                        </include>
+                    </figcaption>
+                </figure>
+                <div class="testimonial__crcard-card__content">
+                    <div class="star--block">
+
+                       <include src="./components/star.html" locals='{
+                        "list":"[`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`]"
+                       }'>
+                        
+                       </include>
+                    </div>
+                    <p class="comment__content">
+                        "Anima’s Landing Page UI Kit has become a staple in
+                         my design toolkit. This kit has everything I need to get the job done quickly and efficiently."
                     </p>
                 </div>
-                <!-- End feature__content__main-content -->
-                <!-- Start feature__content__button -->
-                <div class="features__content-button">
-                    <button class="features-button">
-                        <img src="../assets/icons/ic-flyingSaucer.svg" alt="fly" class="feature-icon">
-                        <p class="features-button__content">Fast buildding</p>
-                    </button>
-                    
-                    <button class="features-button">
-                        <img src="../assets/icons/ic-magic-wand.svg" alt="macgic-wand" class="feature-icon">
-                        <p class="features-button__content">Easy to edit</p>
-                    </button>
-                    
-                    <button class="features-button">
-                        <img src="../assets/icons/ic-bounding-box.svg" alt="bounding-box" class="feature-icon">
-                        <p class="features-button__content">Responsiveness</p>
-                    </button>
-                    
-                    <button class="features-button">
-                        <img src="../assets/icons/ic-package.svg" alt="package" class="feature-icon">
-                        <p class="features-button__content">No code needed</p>
-                    </button>
-                </div>
-         </div>
-         <!-- End feature__content block -->
-          <!-- Start picture block -->
-          <div class="features__picture">
-            <!-- Circle before the smart phone -->
-         <div class="features__picture--circle"></div>
-         <!-- Smart phone -->
-         <img src="../assets/images/MobileMockup.png" alt="phone" class="features__picture-smartphone">
-         <!-- Red star -->
-         <img src="../assets/icons/ic-substract--red.svg" alt="star" class="features__picture-star--red">
-         <!-- White star -->
-         <img src="../assets/icons/ic-substract.svg" alt="star" class="features__picture-star--white">
-  </div>
-  <!-- End picture block -->
-    </section>
-    <!-- End of Features section -->
+            </article>
+            <article class="testimonial__crcard-card">
+                <figure class="testimonial__crcard-card-image">
+                    <img src="../assets/images/customerboy.png" alt="boys" class="people-image">
+                    <figcaption class="image-caption">
+                        <h5 class="people-name">
+                           David B.
+                        </h5>
+                        <p class="people-job">
+                            Lead Designer <a href="#" class="job-link">@Creative</a>
+                        </p>
+                        </include>
+                    </figcaption>
+                </figure>
+                <div class="testimonial__crcard-card__content">
+                    <div class="star--block">
 
+                        <include src="./components/star.html" locals='{
+                            "list":"[`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`]"
+                           }'>
+                            
+                           </include>
+                    </div>
+                    <p class="comment__content">
+                        “The Landing Page UI Kit has been a game changer. 
+                        The pre-designed components and templates have helped
+                         us deliver projects faster!”
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!--End of testimonial section-->
+    <!--Start team section-->
+    <section class="team">
+        <div class="team__content">
+            <h2 class="first-title">
+                Meet Our Team
+            </h2>
+            <p class="second-title">
+                Get to know the faces behind the scenes and learn about the values that drive us.
+            </p>
+        </div>
+        <div class="team__crcard">
+            <article class="team__crcard-card">
+                <figure class="team__crcard-card-image">
+                    <img src="../assets/images/team-member-1.png" alt="member" class="people-image">
+                    <figcaption class="image-caption">
+                        <h5 class="people-name">Sarah K.</h5>
+                        <p class="people-job">Lead Designer</p>
+                    </figcaption>
+                </figure>
+                <div class="team__crcard-card-content">
+                    <p class="content-para">
+                        With a passion for color and a love for clean lines, Sarah brings all our wildest design dreams to life.
+                    </p>
+                    <div class="content-link">
+                        <include src="./components/linklist.html" locals='{
+                            "list":"[`Twitter`,`Dribble`,`Linkedlin`]"
+                        }'>
+                            
+                        </include>
+                    </div>
+                </div>
+            </article>
+            <article class="team__crcard-card">
+                <figure class="team__crcard-card-image">
+                    <img src="../assets/images/team-member-2.png" alt="member" class="people-image">
+                    <figcaption class="image-caption">
+                        <h5 class="people-name">Michael L.</h5>
+                        <p class="people-job">Product Designer</p>
+                    </figcaption>
+                </figure>
+                <div class="team__crcard-card-content">
+                    <p class="content-para">
+                        Michael got a sharp eye for detail and the ability to turn any boring interface into a work of art.
+                    </p>
+                    <div class="content-link">
+                        <include src="./components/linklist.html" locals='{
+                            "list":"[`Twitter`,`Dribble`,`Linkedlin`]"
+                        }'>
+                            
+                        </include>
+                    </div>
+                </div>
+            </article>
+            <article class="team__crcard-card">
+                <figure class="team__crcard-card-image">
+                    <img src="../assets/images/team-member-3.png" alt="member" class="people-image">
+                    <figcaption class="image-caption">
+                        <h5 class="people-name">Lauren M.</h5>
+                        <p class="people-job">UX Designer</p>
+                    </figcaption>
+                </figure>
+                <div class="team__crcard-card-content">
+                    <p class="content-para">
+                        Lauren is the mastermind behind all the seamless user experiences you love. She's a wizard at making things intuitive.
+                    </p>
+                    <div class="content-link">
+                        <include src="./components/linklist.html" locals='{
+                            "list":"[`Twitter`,`Dribble`,`Linkedlin`]"
+                        }'>
+                            
+                        </include>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 </main>
