@@ -8,7 +8,7 @@
 
 ## TIMELINE:
 
-- 7 days (Oct 18 - Oct 25)
+- 17 days (Oct 18 - Nov 4)
 
 ## TARGET:
 
