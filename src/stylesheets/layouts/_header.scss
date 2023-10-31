@@ -22,6 +22,7 @@
             position: absolute;
             left: 3%;
             @include flex($justify:center,$align:center);
+
             .logo{
             width: 32px;
             height: 32px;
@@ -36,10 +37,12 @@
                         @include font($font-weight:700,$font-family:$secondary-font);
                     }
                 }
+
             }
            
         }
         .menu{
+
             width: 60%;
             position: absolute;
             right: 3%;
@@ -64,6 +67,7 @@
                         @include font($color:$button-color-primary,$font-size:pxToRem(16),$font-style:normal,$font-weight:600,$line-height:24px);
                     }
                 }
+
             }
             .getst{
                 @include button($width:220px,$height:60px,$background-color:$button-color-primary,$border-radius:20px,$border:none);
@@ -94,6 +98,7 @@
             margin-left: 5%;
             width: 60%;
         }
+
         .header-main__title{ 
             width: 80%;
             @include font($font-family:$secondary-font,$color:$text-color-primary,$font-weight:700,$font-size:pxToRem(38),$line-height:130%,$font-style:normal);
@@ -210,6 +215,7 @@
                         width: 400px;
                         
                     }
+
                 }
             }
             &::before{
