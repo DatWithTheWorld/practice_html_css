@@ -19,7 +19,6 @@
     }
     cursor: pointer;
 }
-
 @mixin grid($grid-tplt-row:false,$grid-tplt-column:false,$justify-content:false,$align-items:false,$grid-gap:false){
       display: grid;
       @if $grid-tplt-row != false{
