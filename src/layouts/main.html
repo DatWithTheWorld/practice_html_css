@@ -19,28 +19,28 @@
                     <figure>
                         <img src="../assets/icons/ic-flyingSaucer.svg" alt="fly" class="feature-icon">
                     </figure>
-                    <p class="features-button__content">Fast buildding</p>
+                    <a class="features-button__content" href="#">Fast buildding</a>
                 </button>
 
                 <button class="features-button">
                     <figure>
                         <img src="../assets/icons/ic-magic-wand.svg" alt="macgic-wand" class="feature-icon">
                     </figure>
-                    <p class="features-button__content">Easy to edit</p>
+                    <a class="features-button__content" href="#">Easy to edit</a>
                 </button>
 
                 <button class="features-button">
                     <figure>
                         <img src="../assets/icons/ic-bounding-box.svg" alt="bounding-box" class="feature-icon">
                     </figure>
-                    <p class="features-button__content">Responsiveness</p>
+                    <a class="features-button__content" href="#">Responsiveness</a>
                 </button>
 
                 <button class="features-button">
                     <figure>
                         <img src="../assets/icons/ic-package.svg" alt="package" class="feature-icon">
                     </figure>
-                    <p class="features-button__content">No code needed</p>
+                    <a class="features-button__content" href="#">No code needed</a>
                 </button>
             </div>
         </div>
@@ -97,63 +97,24 @@
             </p>
         </div>
         <div class="testimonial__crcard">
-            <article class="testimonial__crcard-card">
-                <figure class="testimonial__crcard-card-image">
-                    <img src="../assets/images/customergirl.png" alt="girl" class="people-image">
-                    <figcaption class="image-caption">
-                        <h5 class="people-name">
-                             Lauren M.
-                        </h5>
-                        <p class="people-job">
-                            UI Designer <a href="#" class="job-link">@Bao</a>
-                        </p>
-                        </include>
-                    </figcaption>
-                </figure>
-                <div class="testimonial__crcard-card__content">
-                    <div class="star--block">
-
-                       <include src="./components/star.html" locals='{
-                        "list":"[`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`]"
-                       }'>
-                        
-                       </include>
-                    </div>
-                    <p class="comment__content">
-                        "Anima’s Landing Page UI Kit has become a staple in
-                         my design toolkit. This kit has everything I need to get the job done quickly and efficiently."
-                    </p>
-                </div>
-            </article>
-            <article class="testimonial__crcard-card">
-                <figure class="testimonial__crcard-card-image">
-                    <img src="../assets/images/customerboy.png" alt="boys" class="people-image">
-                    <figcaption class="image-caption">
-                        <h5 class="people-name">
-                           David B.
-                        </h5>
-                        <p class="people-job">
-                            Lead Designer <a href="#" class="job-link">@Creative</a>
-                        </p>
-                        </include>
-                    </figcaption>
-                </figure>
-                <div class="testimonial__crcard-card__content">
-                    <div class="star--block">
-
-                        <include src="./components/star.html" locals='{
-                            "list":"[`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`]"
-                           }'>
-                            
-                           </include>
-                    </div>
-                    <p class="comment__content">
-                        “The Landing Page UI Kit has been a game changer. 
-                        The pre-designed components and templates have helped
-                         us deliver projects faster!”
-                    </p>
-                </div>
-            </article>
+            <include src="./components/customer__card.html" locals='{
+                "list": [
+                  {
+                    "ipic": "customergirl",
+                    "peoplename": "Lauren M.",
+                    "peoplejob": "Lead Designer",
+                    "joblink": "@Bao",
+                    "content": "\"Anima’s Landing Page UI Kit has become a staple in my design toolkit. This kit has everything I need to get the job done quickly and efficiently.\""
+                  },
+                  {
+                    "ipic": "customerboy",
+                    "peoplename": "David B.",
+                    "peoplejob": "UI Designer",
+                    "joblink": "@Creative",
+                    "content": "\"The Landing Page UI Kit has been a game changer. The pre-designed components and templates have helped us deliver projects faster!\""
+                  }
+                ]
+              }'></include>
         </div>
     </section>
     <!--End of testimonial section-->
@@ -168,7 +129,7 @@
             </p>
         </div>
         <div class="team__crcard">
-            <article class="team__crcard-card">
+            <!-- <article class="team__crcard-card">
                 <figure class="team__crcard-card-image">
                     <img src="../assets/images/team-member-1.png" alt="member" class="people-image">
                     <figcaption class="image-caption">
@@ -230,7 +191,16 @@
                         </include>
                     </div>
                 </div>
-            </article>
+            </article> -->
+            <include src="./components/team__card.html" locals='{
+                "list":[
+                 {"num":"1","peoplename":"Sarah K.","peoplejob":"Lead Designer","content":" With a passion for color and a love for clean lines, Sarah brings all our wildest design dreams to life."},
+                 {"num":"2","peoplename":"Michael L.","peoplejob":"Product Designer","content":"  Michael got a sharp eye for detail and the ability to turn any boring interface into a work of art."},
+                 {"num":"3","peoplename":"Lauren M.","peoplejob":"UX Designer","content":"Lauren is the mastermind behind all the seamless user experiences you love. She`s a wizard at making things intuitive."}
+                ]
+            }'>
+                
+            </include>
         </div>
     </section>
     <!--End of team section-->
@@ -281,7 +251,7 @@
             <figure>
                 <img src="../assets/icons/ic-rocket.svg" alt="rocket">
             </figure>
-            <a class="btn-start__content">Get Started</a>
+            <a class="btn-start__content" href="#">Get Started</a>
         </button>
         <div class="highlight-image">
             <figure class="highlight-image-tablet">

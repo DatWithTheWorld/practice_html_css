@@ -1,0 +1,23 @@
+<each loop="item in {{ list }}">
+    <article class="team__crcard-card">
+        <figure class="team__crcard-card-image">
+            <img src="../assets/images/team-member-{{ item.num }}.png" alt="member" class="people-image">
+            <figcaption class="image-caption">
+                <h5 class="people-name">{{ item.peoplename }}</h5>
+                <p class="people-job">{{ item.peoplejob }}</p>
+            </figcaption>
+        </figure>
+        <div class="team__crcard-card-content">
+            <p class="content-para">
+                {{ item.content }}
+            </p>
+            <div class="content-link">
+                <include src="./components/linklist.html" locals='{
+                    "list":"[`Twitter`,`Dribble`,`Linkedlin`]"
+                }'>
+                    
+                </include>
+            </div>
+        </div>
+    </article>
+</each>

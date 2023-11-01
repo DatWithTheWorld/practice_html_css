@@ -47,6 +47,10 @@
             position: absolute;
             right: 3%;
             @include flex($justify:flex-end,$align:center,$gap:30px);
+            button:hover{
+                border: 2px solid $text-color-primary;
+                scale: 0.9;
+            }
             .menu__contact{
                 display: none;
                 @include desktop{
@@ -54,8 +58,12 @@
                    .contact__item{
                     text-decoration: none;
                     @include font($color:$button-color-primary,$font-size:pxToRem(16),$font-style:normal,$font-weight:600,$line-height:24px);
+                    &:hover{
+                        @include font($color:$color-text-active);
+                    }
                    }
                 }
+                
             }
             .button__htw{
                 display: none;
@@ -137,6 +145,10 @@
        .header-main__button{
         width: 100%;
         margin-bottom: 25%;
+        button:hover{
+            border: 2px solid $text-color-primary;
+            scale: 0.9;
+        }
         @include flex($direction:column,$gap:20px,$justify:center,$align:center);
         @include tablet{
             @include flex($direction:row);

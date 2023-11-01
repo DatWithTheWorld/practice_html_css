@@ -1,0 +1,29 @@
+<each loop="item in {{ list }}">
+    <article class="testimonial__crcard-card">
+        <figure class="testimonial__crcard-card-image">
+            <img src="../assets/images/{{ item.ipic }}.png" alt="girl" class="people-image">
+            <figcaption class="image-caption">
+                <h5 class="people-name">
+                     {{ item.peoplename }}
+                </h5>
+                <p class="people-job">
+                    {{ item.peoplejob }} <a href="#" class="job-link">{{ item.joblink }}</a>
+                </p>
+                </include>
+            </figcaption>
+        </figure>
+        <div class="testimonial__crcard-card__content">
+            <div class="star--block">
+    
+               <include src="./components/star.html" locals='{
+                "list":"[`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`,`ic-star.svg`]"
+               }'>
+                
+               </include>
+            </div>
+            <p class="comment__content">
+                {{ item.content }}
+            </p>
+        </div>
+    </article>
+</each>
