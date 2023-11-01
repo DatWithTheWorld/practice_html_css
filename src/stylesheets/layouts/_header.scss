@@ -23,8 +23,9 @@
         .header-main__logo{
             position: absolute;
             left: 3%;
+            text-decoration: none;
+            color: $text-color-primary;
             @include flex($justify:center,$align:center);
-
             .logo{
             width: 32px;
             height: 32px;
@@ -39,9 +40,7 @@
                         @include font($font-weight:700,$font-family:$secondary-font);
                     }
                 }
-
-            }
-           
+          }     
         }
         .menu{
             width: 60%;
@@ -68,7 +67,6 @@
                         @include font($color:$button-color-primary,$font-size:pxToRem(16),$font-style:normal,$font-weight:600,$line-height:24px);
                     }
                 }
-
             }
             .getst{
                 @include button($width:220px,$height:60px,$background-color:$button-color-primary,$border-radius:20px,$border:none);
