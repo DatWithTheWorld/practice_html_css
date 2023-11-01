@@ -1,0 +1,9 @@
+<each loop="item in {{ list }}">
+    <button class="features-button">
+        <figure>
+            <img src="../assets/icons/ic-{{ item.linkimg }}.svg" alt="{{ item.alts }}" class="feature-icon">
+        </figure>
+        <a class="features-button__content" href="#">{{ item.content }}</a>
+    </button>
+    
+</each>

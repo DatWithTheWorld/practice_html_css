@@ -15,33 +15,16 @@
             <!-- End feature__content__main-content -->
             <!-- Start feature__content__button -->
             <div class="features__content-button">
-                <button class="features-button">
-                    <figure>
-                        <img src="../assets/icons/ic-flyingSaucer.svg" alt="fly" class="feature-icon">
-                    </figure>
-                    <a class="features-button__content" href="#">Fast buildding</a>
-                </button>
-
-                <button class="features-button">
-                    <figure>
-                        <img src="../assets/icons/ic-magic-wand.svg" alt="macgic-wand" class="feature-icon">
-                    </figure>
-                    <a class="features-button__content" href="#">Easy to edit</a>
-                </button>
-
-                <button class="features-button">
-                    <figure>
-                        <img src="../assets/icons/ic-bounding-box.svg" alt="bounding-box" class="feature-icon">
-                    </figure>
-                    <a class="features-button__content" href="#">Responsiveness</a>
-                </button>
-
-                <button class="features-button">
-                    <figure>
-                        <img src="../assets/icons/ic-package.svg" alt="package" class="feature-icon">
-                    </figure>
-                    <a class="features-button__content" href="#">No code needed</a>
-                </button>
+                <include src="./components/buttonlist.html" locals='{
+                    "list":[
+                    {"linkimg":"flyingSaucer","alts":"fly","content":"Fast buildding"},
+                    {"linkimg":"magic-wand","alts":"macgic-wand","content":"Easy to edit"},
+                    {"linkimg":"bounding-box","alts":"bounding-box","content":"Responsiveness"},
+                    {"linkimg":"package","alts":"package","content":"No code needed"}
+                    ]
+                }'>
+                    
+                </include>
             </div>
         </div>
         <!-- End feature__content block -->
@@ -129,69 +112,6 @@
             </p>
         </div>
         <div class="team__crcard">
-            <!-- <article class="team__crcard-card">
-                <figure class="team__crcard-card-image">
-                    <img src="../assets/images/team-member-1.png" alt="member" class="people-image">
-                    <figcaption class="image-caption">
-                        <h5 class="people-name">Sarah K.</h5>
-                        <p class="people-job">Lead Designer</p>
-                    </figcaption>
-                </figure>
-                <div class="team__crcard-card-content">
-                    <p class="content-para">
-                        With a passion for color and a love for clean lines, Sarah brings all our wildest design dreams to life.
-                    </p>
-                    <div class="content-link">
-                        <include src="./components/linklist.html" locals='{
-                            "list":"[`Twitter`,`Dribble`,`Linkedlin`]"
-                        }'>
-                            
-                        </include>
-                    </div>
-                </div>
-            </article>
-            <article class="team__crcard-card">
-                <figure class="team__crcard-card-image">
-                    <img src="../assets/images/team-member-2.png" alt="member" class="people-image">
-                    <figcaption class="image-caption">
-                        <h5 class="people-name">Michael L.</h5>
-                        <p class="people-job">Product Designer</p>
-                    </figcaption>
-                </figure>
-                <div class="team__crcard-card-content">
-                    <p class="content-para">
-                        Michael got a sharp eye for detail and the ability to turn any boring interface into a work of art.
-                    </p>
-                    <div class="content-link">
-                        <include src="./components/linklist.html" locals='{
-                            "list":"[`Twitter`,`Dribble`,`Linkedlin`]"
-                        }'>
-                            
-                        </include>
-                    </div>
-                </div>
-            </article>
-            <article class="team__crcard-card">
-                <figure class="team__crcard-card-image">
-                    <img src="../assets/images/team-member-3.png" alt="member" class="people-image">
-                    <figcaption class="image-caption">
-                        <h5 class="people-name">Lauren M.</h5>
-                        <p class="people-job">UX Designer</p>
-                    </figcaption>
-                </figure>
-                <div class="team__crcard-card-content">
-                    <p class="content-para">
-                        Lauren is the mastermind behind all the seamless user experiences you love. She's a wizard at making things intuitive.
-                    </p>
-                    <div class="content-link">
-                        <include src="./components/linklist.html" locals='{
-                            "list":"[`Twitter`,`Dribble`,`Linkedlin`]"
-                        }'>
-                            
-                        </include>
-                    </div>
-                </div>
-            </article> -->
             <include src="./components/team__card.html" locals='{
                 "list":[
                  {"num":"1","peoplename":"Sarah K.","peoplejob":"Lead Designer","content":" With a passion for color and a love for clean lines, Sarah brings all our wildest design dreams to life."},
