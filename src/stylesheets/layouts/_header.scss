@@ -125,7 +125,7 @@
             }
             @include desktop{
                 @include font($font-size:pxToRem(21));
-                width: 100%;
+                width: 95%;
                 margin: 3% 0 5% 0;
                 text-align: left;
             }
@@ -185,7 +185,7 @@
             z-index: 0;
             @include flex($justify:center,$align:center); 
             @include tablet{
-                width: 70%;
+                width: 65%;
             }
             .icon-star{
                 position: absolute;
@@ -214,10 +214,10 @@
                     padding-left: 8%;
                     width: 80%;
                     @include tablet{
-                        width: 70%;
+                        width: 350px; 
                     }
                     @include desktop{
-                        width: 60%px;
+                        width: 400px; 
                     }
                 }
             }
@@ -230,6 +230,14 @@
                 height: 75%;
                 border-radius: 90px 90px 0 0;
                 background-color: $button-color-secondary;
+                @include tablet{
+                    border-radius: 130px 130px 0 0;
+                    width: 90%;
+                }
+                @include desktop{
+                    border-radius: 130px 130px 0 0;
+                    width: 80%;
+                }
             }
         }
         

@@ -1,36 +1,155 @@
 @use "../../abstracts/" as *;
+
 .features{
     position: relative;
     z-index: 4;
-    margin-top: -25%;
+    margin-top: -20%;
     background-color: $secondary-color;
     width: 100%;
     @include flex($direction:column,$justify:center,$align:center);
     text-align: center;
+    @include tablet{
+       margin-top: -15%;
+    }
+    @include desktop{
+    margin-top: -15%;
+    @include flex($direction:row-reverse,$justify:center,$align:center);
+    }
     &__content{
+        width: 100%;
+        @include desktop{
+            margin-right: 5%;
+            margin-left: 5%;
+        }
        &-main-content{
           margin-top: 15%;
+          margin-bottom: 8%;
+          @include desktop{
+            margin-top: 10%;
+            @include flex($justify:flex-start,$align:flex-start);
+            text-align: left;
+          }
+          @include flex($direction:column,$justify:center,$align:center);
           &-first--title{
             @include font($font-size:pxToRem(38),$font-style:normal,$font-weight:700,$line-height:130%,$font-family:$secondary-font);
+            margin-bottom: 5%;
+          }
+          &-second--title{
+            width: 85%;
+            p{
+                 @include font($font-family:$third-font,$font-size:pxToRem(21),$font-style:normal,$font-weight:normal,$line-height:150%);
+            }
           }
        }
        &-button{
-        @include grid($grid-tplt-column:35% 35%, $grid-tplt-row: 50% 50%,$justify-content:center,$align-items:center,$grid-gap:10px 10px);  
+        @include grid($grid-tplt-column:100%, $grid-tplt-row: 30% 30% 30% 30%,$justify-content:center,$align-items:center);  
+        justify-items: center;
+        @include tablet{
+            @include grid($grid-tplt-column:45% 45% , $grid-tplt-row: 60% 60% ,$justify-content:center,$align-items:center);
+        }
+        @include desktop{
+            @include grid($grid-tplt-column:50% 50%, $grid-tplt-row: 60% 60%,$justify-content:center,$align-items:center);
+            justify-items: left;
+        }
         .features-button{
-            
+            @include flex($justify:flex-start,$align:center);
+            padding-left: 5%;
+            @include button($width:80%,$background-color:$button-color-secondary,$border:1px solid $color,$border-radius:20px,$height:90px);
+            @include tablet{
+                @include button($width:95%,$background-color:$button-color-secondary,$border:1px solid $color,$border-radius:20px,$height:90px);
+            }
+            @include desktop{
+                @include button($width:90%,$background-color:$button-color-secondary,$border:1px solid $color,$border-radius:20px,$height:90px);
+            }
+            figure{
+                @include button($width:50px,$height:50px,$background-color:rgba(0, 147, 121,0.1),$border-radius:15px);
+                @include flex($justify:center,$align:center);
+                margin-right: 5%;
+              .feature-icon{
+                @include button($width:26px,$height:26px);
+            }  
+            }
+            &__content{
+                @include font($font-family:$third-font,$font-size:pxToRem(21),$font-weight:400,$line-height:150%,$color:$text-color-primary);
+                overflow-x: hidden;
+            }
         }
        }
     }
     &__picture{
         position: relative;
+        margin-top: 25%;
+        width: 100%;
+        z-index: 2;
+        @include flex($justify:center,$align:center);
+        @include tablet{
+            margin-top: 15%;
+        }
+        @include desktop{
+            margin-top: 10%;
+            width: 80%;
+            margin-left: 5%;
+        }
+        &-circle{
+             @include button($width:225px,$height:225px,$background-color:$primary-color,$border-radius:50%); 
+             
+        }
         &-smartphone{
             padding-left: 5%;
+            width: 180px;
+            @include tablet{
+                width: 300px;
+            }
+            @include desktop{
+                width: 310px;
+            }
         }
         &-star--red{
             position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 70px;
+            height: 105px;
+            @include tablet{
+                width: 100px;
+                height: 130px;
+                left: 22%;
+            }
+            @include desktop{
+                width: 100px;
+                height: 130px;
+                left: 10%;
+            }
         }
         &-star--white{
             position: absolute;
+            @include tablet{
+                width: 70px;
+                right: 25%;
+            }
+            @include desktop{
+                width: 60px;
+                right: 15%;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            margin:auto auto;
+            width: 255px;
+            height: 255px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            @include tablet{
+                width: 420px;
+                height: 420px;
+            }
+            @include desktop{
+                width: 420px;
+                height: 420px;
+            }
         }
     }
 }
+
