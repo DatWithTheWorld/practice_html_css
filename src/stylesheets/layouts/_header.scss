@@ -3,6 +3,8 @@
 
 .header-main{
     width: 100%;
+    position: relative;
+    z-index: 3;
     @include bg-color($primary-color);
     &__top{
         position: relative;
@@ -42,7 +44,6 @@
            
         }
         .menu{
-
             width: 60%;
             position: absolute;
             right: 3%;
@@ -98,7 +99,6 @@
             margin-left: 5%;
             width: 60%;
         }
-
         .header-main__title{ 
             width: 80%;
             @include font($font-family:$secondary-font,$color:$text-color-primary,$font-weight:700,$font-size:pxToRem(38),$line-height:130%,$font-style:normal);
@@ -185,7 +185,7 @@
             z-index: 0;
             @include flex($justify:center,$align:center); 
             @include tablet{
-                width: 55%;
+                width: 70%;
             }
             .icon-star{
                 position: absolute;
@@ -209,18 +209,21 @@
             }
             .cover-phone{
                 @include flex($justify:center,$align:center);
+                width: 100%;
                 .pic-phone{
                     padding-left: 8%;
+                    width: 80%;
                     @include tablet{
-                        width: 400px;
-                        
+                        width: 70%;
                     }
-
+                    @include desktop{
+                        width: 60%px;
+                    }
                 }
             }
             &::before{
                 content: '';
-                z-index: -2;
+                z-index: -20;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -232,5 +235,4 @@
         
        }
     }
-
 }
