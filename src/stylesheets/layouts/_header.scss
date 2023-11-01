@@ -21,6 +21,8 @@
         .header-main__logo{
             position: absolute;
             left: 3%;
+            text-decoration: none;
+            color: $text-color-primary;
             @include flex($justify:center,$align:center);
             .logo{
             width: 32px;
