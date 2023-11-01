@@ -1,36 +1,13 @@
 <footer class="footer-main">
-    <div class="container">
-  
-        <!-- Start footer social icons -->
-        <div class="footer-main__social">
-          <a href="javascript:void(0)" class="footer-main__icon">
-            <img
-              src="../assets/icons/ic-instagram.svg"
-              alt="instagram icon"
-              class="img-main"
-            />
-          </a>
-          <a href="javascript:void(0)" class="footer-main__icon">
-            <img
-              src="../assets/icons/ic-dirbbble.svg"
-              alt="dirbble plus icon"
-              class="img-main"
-            />
-          </a>
-          <a href="javascript:void(0)" class="footer-main__icon">
-            <img
-              src="../assets/icons/ic-github.svg"
-              alt="github icon"
-              class="img-main"
-            />
-          </a>
-          <a href="javascript:void(0)" class="footer-main__icon">
-            <img
-              src="../assets/icons/ic-twitter.svg"
-              alt="twitter icon"
-              class="img-main"
-            />
-          </a>
-        </div>
-    </div>
+     <div class="iconlist">
+          <include src="./components/iconlist.html" locals='{
+            "list":"[`ic-youtube`,`ic-instagram`,`ic-dirbbble`,`ic-github`,`ic-linkin`,`ic-twitter`]"
+ 
+          }'>
+            
+          </include>
+     </div>
+     <p class="footer-main__content">
+      &#169; 2023 Anima’s Landing Page Ui Kit.
+     </p>
   </footer>

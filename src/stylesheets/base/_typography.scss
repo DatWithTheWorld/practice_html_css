@@ -15,4 +15,7 @@ body {
     font-family: $primary-font;
     font-weight: 400;
     font-size: pxToRem(14);
+    max-width: 1400px;
+    margin: 0 auto;
+
 }

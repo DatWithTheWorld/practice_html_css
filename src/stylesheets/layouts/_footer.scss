@@ -1,0 +1,65 @@
+@use '../abstracts/' as *;
+
+.footer-main{
+    background-color: $text-color-primary;
+    width: 100%;
+    padding: 5% 5%;
+    @include flex($direction:column);
+    @include tablet{
+     @include flex($direction:row-reverse,$justify:space-between,$align:center);
+     padding: 5% 7%;
+    }
+    @include desktop{
+     @include flex($direction:row-reverse,$justify:space-between,$align:center);
+    padding: 1% 6%;
+    }
+    .iconlist{
+        @include flex($gap:3%);
+        .icon:nth-child(1){
+           display: none;
+           @include tablet{
+            display: block;
+           }
+           @include desktop{
+            display: block;
+           }
+        }
+        .icon:nth-child(5){
+            display: none;
+            @include tablet{
+                display: block;
+            }
+            @include desktop{
+                display: block;
+            }
+        }
+        @include tablet{
+            @include flex($gap:8%);
+            .icon:nth-child(6){
+                display: none;
+            }
+              .icon:nth-child(3){
+                display: none;
+            }
+        }
+        @include desktop{
+            @include flex($gap:12%);
+            .icon:nth-child(6){
+                display: none;
+            }
+            .icon:nth-child(3){
+                display: none;
+            }
+        }
+    }
+    &__content{
+        margin-top: 5%;
+        @include font($font-size:pxToRem(14),$font-weight:500,$line-height:20px,$color:$button-color-secondary);
+        @include tablet{
+         margin-top: 0;
+        }
+        @include desktop{
+         margin-top: 0;
+        }
+    }
+}

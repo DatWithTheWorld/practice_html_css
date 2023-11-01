@@ -160,7 +160,7 @@
     <section class="team">
         <div class="team__content">
             <h2 class="first-title">
-                Meet Our Team
+                Meet our team
             </h2>
             <p class="second-title">
                 Get to know the faces behind the scenes and learn about the values that drive us.
@@ -232,4 +232,63 @@
             </article>
         </div>
     </section>
+    <!--End of team section-->
+    <!--Start logobar section-->
+    <section class="logo-bar">
+        <div class="logo-bar__content">
+            <h2 class="first-title">
+                More than 50 Integrations
+            </h2>
+            <p class="second-title">
+                We integrate with more than 50 apps you use daily
+            </p>
+        </div>
+        <div class="logo-bar__icon">
+            <div class="logo-bar__icon-flex-line">
+               <include src="./components/iconlist.html" locals='{
+                  "list":"[`ic-loom`,`ic-slack`,`ic-spotify`,`ic-discord`,`ic-kickstarter`,`ic-dropbox`]"
+               }'>
+               </include>
+            </div>
+            <div class="logo-bar__icon-flex-line">
+                <include src="./components/iconlist.html" locals='{
+                    "list":"[`ic-mailchimp`,`ic-stripe`,`ic-zoom`,`ic-apple`,`ic-sketch`]"
+                 }'>
+                 </include>
+            </div>
+            <div class="logo-bar__icon-flex-line">
+                <include src="./components/iconlist.html" locals='{
+                    "list":"[`ic-airbnb`,`ic-amazonsvg`,`ic-react`,`ic-eventbrite`]"
+                 }'>
+                 </include>
+            </div>
+        </div>
+        <button class="logo-bar-button-view"><a href="#" class="link">View All Integrations</a></button>
+    </section>
+    <!--End of logobar section-->
+    <!--Start highlight section-->
+    <section class="highlight">
+        <div class="highlight__content">
+            <h2 class="first-title">
+                Get Landing Page UI Kit Today!
+            </h2>
+            <p class="second-title">
+                Break Figma limits and explore the endless possibilities with Anima.
+            </p>
+        </div>
+        <button class="btn-start">
+            <img src="../assets/icons/ic-rocket.svg" alt="rocket">
+            <a class="btn-start__content">Get Started</a>
+        </button>
+        <div class="highlight-image">
+            <figure class="highlight-image-tablet">
+                <img src="../assets/images/imageshape.png" alt="tablet" class="shape">
+                <img src="../assets/images/tablettablet.png" alt="tablet" class="shapetablet">
+                <img src="../assets/images/desktoptablet.png" alt="tablet" class="shapedesktop">
+            </figure>
+            <img src="../assets/icons/ic-substract.svg" alt="star" class="star first-star">
+            <img src="../assets/icons/ic-substract.svg" alt="star" class="star second-star">
+        </div>
+    </section>
 </main>
+

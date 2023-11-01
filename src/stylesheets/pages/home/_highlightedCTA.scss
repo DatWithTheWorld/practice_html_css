@@ -1,0 +1,131 @@
+@use "../../abstracts/" as *;
+
+.highlight{
+    width: 100%;
+    @include flex($direction:column,$justify:center,$align:center);
+    text-align: center;
+    padding: 15% 0 0 0;
+    background-color: $primary-color;
+    @include tablet{
+        padding: 10% 0 0 0;
+    }
+    @include desktop{
+        padding: 5% 0 0 0;
+    }
+    &__content{
+        width: 70%;
+        .first-title{
+            @include font($font-size:pxToRem(28),$line-height:130%,$font-weight:600);
+            letter-spacing: -1px;
+            @include tablet{
+                @include font($font-size:pxToRem(50));
+            }
+            @include desktop{
+                @include font($font-size:pxToRem(50));
+            }
+        }
+        .second-title{
+            margin-top: 5%;
+            @include font($font-family:$third-font,$font-size:pxToRem(16),$font-weight:400,$line-height:130%);
+            @include tablet{
+                @include font($font-size:pxToRem(21));
+            }
+            @include desktop{
+                @include font($font-size:pxToRem(21));
+            }
+        }
+    }
+    .btn-start{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        @include button($width:50%,$height:60px,$background-color:$button-color-primary,$border:none,$border-radius:20px);
+        @include flex($justify:center,$align:center);
+        @include tablet{
+            @include button($width:35%);
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        @include desktop{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            @include button($width:30%);
+        }
+        &__content{
+            @include font($font-size:pxToRem(16),$font-weight:600,$line-height:24px,$color:$button-color-secondary);
+            margin-left: 3%;
+        }
+    }
+    &-image{
+        width: 100%;
+        position: relative;
+        @include flex($justify:center,$align:center);
+        &-tablet{
+            width:70%;
+            .shape{
+                width: 100%;
+                height: auto;
+                margin-bottom: -1.5%;
+               @include tablet{
+                display: none;
+               }
+               @include desktop{
+                display: none;
+               }
+            }
+            .shapetablet{
+                display: none; 
+                width: 100%;
+                height: auto;
+                margin-bottom: 0;
+                @include tablet{
+                    display: block;
+                }
+                @include desktop{
+                    display: none;
+                }
+            }
+            .shapedesktop{
+                display:none;
+                margin-bottom: 0;
+                width: 100%;
+                height: auto;
+                @include desktop{
+                    display: block;
+                }
+            }
+        }
+        .star{
+            position: absolute;
+        }
+        .first-star{
+            width: 20px;
+            height: 20px;
+           top: 8%;
+           left: 10%;
+           @include tablet{
+            width: 35px;
+            height: 45px;
+            left: 10%;
+           }
+           @include desktop{
+            width: 60px;
+            height: 70px;
+           }
+        }
+        .second-star{
+           width: 10px;
+           height: 13px;
+           top: 40%;
+           right: 14%;
+           @include tablet{
+            width: 25px;
+            height: 30px;
+            right: 10%;
+           }
+           @include desktop{
+            width: 40px;
+            height: 50px;
+           }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@use "../../abstracts/" as *;
+
+.logo-bar{
+    width: 100%;
+    background-color: $secondary-color;
+    @include flex($direction:column,$justify:center,$align:center);
+    text-align: center;
+    padding: 5% 0 20% 0;
+    @include desktop{
+        padding: 5% 0 10% 0;
+    }
+    &__content{
+        width: 85%;
+        .first-title{
+       @include font($font-size:pxToRem(38),$font-family:$secondary-font,$font-weight:700,$line-height:130%);
+         letter-spacing: -1px;
+         margin-bottom: 5%;
+         @include desktop{
+            margin-bottom: 2%;
+         }
+        }
+        .second-title{
+            @include font($font-size:pxToRem(16),$font-family:$third-font,$font-weight:400,$line-height:150%);
+        }
+    }
+    &__icon{
+        margin-top: 15%;
+        width: 100%;
+        @include flex($direction:column,$justify:center,$align:center);
+        @include desktop{
+            margin-top: 5%;
+        }
+        &-flex-line{
+            width: 90%;
+            @include flex($direction:row,$justify:center,$align:center,$gap:5%);
+            margin-bottom: 10%;
+            @include tablet{
+                @include flex($gap:6%);
+            }
+            @include desktop{
+                @include flex($gap:12%);
+                margin-bottom: 5%;
+            }
+           .icon{
+            width: 40px;
+            height: 40px;
+            @include tablet{
+                width: 50px;
+                height: 50px;
+            }
+            @include desktop{
+                width: 70px;
+                height: 70px;
+            }
+           }
+           
+        }
+    }
+    &-button-view{
+        margin-top: 10%;
+        @include button($width:70%,$height:60px,$border-radius:20px,$border:none,$background-color:$button-color-primary);
+        .link{
+            text-decoration: none;
+            @include font($font-size:pxToRem(16),$line-height:24px,$font-weight:600,$color:$button-color-secondary);
+        }
+        @include tablet{
+            width: 35%;
+        }
+        @include desktop{
+            width: 30%;
+            margin-top: 3%;
+        }
+    }
+}

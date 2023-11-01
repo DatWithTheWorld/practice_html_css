@@ -98,6 +98,7 @@
             @include flex($align:flex-start);
             margin-left: 5%;
             width: 60%;
+            margin-top: -5%;
         }
         .header-main__title{ 
             width: 80%;
@@ -198,7 +199,7 @@
                 @include desktop{
                     width: 40px;
                     height: 50px;
-                }
+              }
             }
             .icon-star--white{
                 left: 0;
