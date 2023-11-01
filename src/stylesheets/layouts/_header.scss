@@ -160,7 +160,6 @@
             @include desktop{
                 @include button($width:30%);
             }
-
         }
         .button-hiw{
             @include button($width:60%, $height:60px,$border:1px solid $button-color-primary,$background-color:$button-color-secondary,$border-radius:20px);
