@@ -3,6 +3,8 @@
 
 .header-main{
     width: 100%;
+    position: relative;
+    z-index: 3;
     @include bg-color($primary-color);
     &__top{
         position: relative;
@@ -208,20 +210,21 @@
             }
             .cover-phone{
                 @include flex($justify:center,$align:center);
+                width: 100%;
                 .pic-phone{
                     padding-left: 8%;
+                    width: 80%;
                     @include tablet{
                         width: 350px; 
                     }
                     @include desktop{
                         width: 400px; 
                     }
-
                 }
             }
             &::before{
                 content: '';
-                z-index: -2;
+                z-index: -20;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -241,5 +244,4 @@
         
        }
     }
-
 }
