@@ -223,12 +223,12 @@
                 width: 100%;
                 .pic-phone{
                     padding-left: 8%;
-                    width: 80%;
+                    width: 90%;
                     @include tablet{
-                        width: 350px; 
+                        width:80%; 
                     }
                     @include desktop{
-                        width: 400px; 
+                        width:80%; 
                     }
                 }
             }
