@@ -224,6 +224,12 @@
                 .pic-phone{
                     padding-left: 8%;
                     width: 80%;
+                    @include tablet{
+                        width: 350px; 
+                    }
+                    @include desktop{
+                        width: 400px; 
+                    }
                 }
             }
             &::before{
