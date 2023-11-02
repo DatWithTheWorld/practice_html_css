@@ -48,7 +48,7 @@
             right: 3%;
             @include flex($justify:flex-end,$align:center,$gap:30px);
             button:hover{
-                border: 2px solid $text-color-primary;
+                border: 2px solid $text-color-secondary;
                 scale: 0.9;
             }
             .menu__contact{
@@ -59,7 +59,7 @@
                     text-decoration: none;
                     @include font($color:$button-color-primary,$font-size:pxToRem(16),$font-style:normal,$font-weight:600,$line-height:24px);
                     &:hover{
-                        @include font($color:$color-text-active);
+                        @include font($color:$button-color-secondary);
                     }
                    }
                 }
@@ -146,7 +146,7 @@
         width: 100%;
         margin-bottom: 25%;
         button:hover{
-            border: 2px solid $text-color-primary;
+            border: 2px solid $text-color-secondary;
             scale: 0.9;
         }
         @include flex($direction:column,$gap:20px,$justify:center,$align:center);
