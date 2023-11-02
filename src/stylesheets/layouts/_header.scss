@@ -96,15 +96,15 @@
         width: 100%;
        @include flex($direction:column,$justify:center,$align:center);
         @include desktop{
-            @include flex($direction:row,$justify:space-between,$align:center);
+            @include flex($direction:row,$justify:space-between,$align:flex-start);
+            margin-top: 10%;
         }
        .header-main__content{
         @include flex($direction:column,$justify:center,$align:center);
         @include desktop{
-            @include flex($align:flex-start);
+            @include flex($align:flex-start,$justify:flex-start);
             margin-left: 5%;
             width: 60%;
-            margin-top: -5%;
         }
         .header-main__title{ 
             width: 80%;
@@ -188,7 +188,6 @@
         @include flex($justify:center,$align:center);
         @include desktop{
             width: 50%;
-            margin-top: 10%;
         }
         &--block{
             position: relative;
