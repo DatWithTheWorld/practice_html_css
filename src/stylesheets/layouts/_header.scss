@@ -222,7 +222,6 @@
                 @include flex($justify:center,$align:center);
                 width: 100%;
                 .pic-phone{
-                    padding-left: 8%;
                     width: 80%;
                     @include tablet{
                         width: 350px; 
