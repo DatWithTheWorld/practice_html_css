@@ -83,6 +83,12 @@
                 .link-list{
                     text-decoration: none;
                     @include font($font-size:pxToRem(14),$font-style:normal,$font-weight:700,$line-height:20px,$color:$text-color-secondary);
+                    &:hover{
+
+                        background-color: $button-color-primary;
+                        color: $button-color-secondary;
+                        border-radius: 30%;
+                    }
                 }
                }
             }
